@@ -1,9 +1,8 @@
-###Given an integer, , print the following values for each integer  from  to :
-
-Decimal
-Octal
-Hexadecimal (capitalized)
-Binary###
+#Given an integer, print the following values for each integer  from  to :
+#Decimal
+#Octal
+#Hexadecimal (capitalized)
+#Binary
 
 def print_formatted(number):
     # your code goes here
