@@ -7,4 +7,6 @@ A = tuple(A_map)
 B_str = B_str.split()
 B_map = map(int,B_str)
 B = tuple(B_map)
-print (list(product(A,B)))
+result = list(product(A,B))
+for i in result:
+    print(i, end = " ");
