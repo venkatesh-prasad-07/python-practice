@@ -90,7 +90,28 @@ class LinkedList:
             while n.ref.ref is not None:
                 n = n.ref  
                 
-            n.ref = None    
+            n.ref = None
+            
+    def del_by_value(self,x):
+        if self.head is None:
+            print('LinkedList is Empty')
+            return
+        
+        elif self.head.data == x:
+            self.head = self.head.ref
+            return
+            
+        elif self.head.ref.data == x:
+            self.head.ref = None
+        
+        else:
+            n = self.head
+            
+            while n.ref is not None:
+                if n.ref.data == x:
+                    n.ref = n.ref.ref
+                    return
+                n = n.ref        
             
             
             
@@ -108,5 +129,8 @@ LL.add_after(50,30)
 LL.add_before(40,50)
 LL.printLL()
 LL.del_begin()
+LL.printLL()
 LL.del_end()
+LL.printLL()
+LL.del_by_value(40)
 LL.printLL()
