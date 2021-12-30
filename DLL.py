@@ -49,7 +49,16 @@ class doublyLL:
             new_node.nref = self.head 
             self.head = new_node
             
-    
+    def add_end(self,data):
+        if self.head is None:
+            ins_empty(data)
+            
+        else:
+            n = self.head
+            while n.nref is not None:
+                n = n.nref
+            new_node = Node(data)
+            n.nref = new_node
             
             
             
