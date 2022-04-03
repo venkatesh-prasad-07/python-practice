@@ -1,32 +1,13 @@
-#User function Template for python3
+#cyclicallyrotatearray by 1
+a = list(map(int,input().split()))
 
-def rotate( arr, n):
-   
-    temp = arr[n-1]
-    for i in range(n-1,0,-1):
-        arr[i] = arr[i-1]
-    arr[0] = temp
+n = len(a)
+last = a[n-1]   
+for i in range(n-1,0,-1):
+    a[i] = a[i-1];
+a[0] = last;
     
-    return arr
+for i in range(0,n):
+    print(a[i],end = " ")
     
-
-
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
-def main():
-
-    T = int(input())
-
-    while(T > 0):
-        n = int(input())
-        a = [int(x) for x in input().strip().split()]
-        rotate(a, n)
-        print(*a)
-
-        T -= 1
-
-
-if __name__ == "__main__":
-    main()
+    
